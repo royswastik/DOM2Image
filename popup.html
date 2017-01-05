@@ -1,0 +1,52 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+        padding:20px;
+        padding-top: 0px;
+        width:360px;
+      }
+      #status {
+        /* avoid an excessively wide status text */
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 400px;
+      }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+     <script src="lib/jquery-1.9.1.js"></script>
+    <script src="popup.js"></script>
+    
+  </head>
+  <body>
+    <h2>DOM to Image</h2>
+    <p>Get all desigining resources by a single click</p>
+    <label for="text-transparent">Make text transparent</label>
+    <input type="checkbox" id="text-transparent"><br /><br />
+    <label for="empty-child">Empty all child elements</label>
+    <input type="checkbox" id="empty-child"><br /><br />
+    <label for="xpath-input">Selector: </label>
+    <input name="xpath-input" id="xpath-input" type="text" placeholder="Enter xpath" />
+    <button id="sendbtn">Get Image</button>
+    
+
+    
+  </body>
+</html>
+

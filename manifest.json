@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+
+  "name": "DOM2Image",
+  "description": "This extension allows the user to convert HTML DOM elements to drawable resources.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "DOM2Image"
+  },
+  "devtools_page": "devtoolPage.html",
+  "content_scripts": [
+    {
+      "matches": ["http://www.google.com/*","http://www.google.co.in/*","http://*/*","https://*/*"],
+      "js": ["lib/jquery-1.9.1.js", "lib/canvas2image.js", "lib/html2canvas.js", "lib/base64.js", "content-script1.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ]
+}
