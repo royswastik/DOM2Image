@@ -1,2 +1,2 @@
 # DOM2Image
-This extension allows the user to convert HTML DOM elements to drawable resources.
+A chrome extension which allows user to convert HTML DOM elements to drawable resources.
